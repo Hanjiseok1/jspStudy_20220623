@@ -1,5 +1,6 @@
 package web.dto;
 
+import domain.entity.User;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,4 +12,13 @@ public class SignupReqDto {
 	private String username;
 	private String password;
 	
+	public User toEntity() {
+		return User.builder()
+				.name(name)
+				.eamil(email)
+				.username(username)
+				.password(password)
+				.roles("ROLE_USER")
+				.build();
+	}
 }
