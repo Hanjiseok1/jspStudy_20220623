@@ -15,7 +15,7 @@ public class SignupReqDto {
 	public User toEntity() {
 		return User.builder()
 				.name(name)
-				.eamil(email)
+				.email(email)
 				.username(username)
 				.password(password)
 				.roles("ROLE_USER")

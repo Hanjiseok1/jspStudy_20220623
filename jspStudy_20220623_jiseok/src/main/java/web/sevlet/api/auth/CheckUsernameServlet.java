@@ -1,6 +1,8 @@
 package web.sevlet.api.auth;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +29,7 @@ public class CheckUsernameServlet extends HttpServlet {
 		response.setContentType("text/plain;charset=UTF-8");
 		try {
 			response.getWriter().print(userService.checkUsername(username));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
