@@ -42,12 +42,13 @@ public class AuthenticationFilter extends HttpFilter implements Filter {
 				return;
 			}
 		}
+		req.getServletContext();
 		
 		chain.doFilter(request, response);
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
-
+		fConfig.getServletContext();
 	}
 
 }
